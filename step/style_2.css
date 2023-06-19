@@ -1,0 +1,90 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* --- FIRST section --*/
+.first-section {
+    background-color: #ffcc00;
+    width: 100vw;
+    /* view point 100% width */
+    height: 100vh;
+    /* view point 100% height*/
+    display: grid;
+    grid-template-rows: 280px  1fr 150px;
+    grid-template-columns: 280px 1fr 100vh;
+    grid-template-areas: "logo . play" /* logo .vuoto play */
+                         ".  .  play " /* .vuoto .vuoto play */
+                         "info . play" /* /* info .vuoto play */ ;
+}
+.logo-img{
+    padding: 32px;
+    width: 100%; /*prende tutta la dimensione della cella che la contiene*/
+    grid-area: logo; /* grid-template-areas */
+    flex-direction: column;
+}
+.play-btn{
+    grid-area: play; /* grid-template-areas */
+}
+.play-info{
+    display: flex;
+    flex-direction: column;
+    grid-area: info; /* grid-template-areas */
+    padding: 32px;
+}
+/*SPAN FIRST section */
+.label{
+    text-transform: uppercase;
+}
+.artist{
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.song{
+
+}
+/* ---------------------------- */
+
+.second-section {
+
+}
+/* --- LAST section --*/
+.last-section {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+
+}
+
+.mouth {
+    width: 50vw;
+    height: 50vw;
+    background-color: #660099;
+}
+
+.arrow {
+    width: 50vw;
+    height: 50vw;
+    background-color: #ff3333;
+}
+
+@media (max-width: 480px) {
+    .last-section {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+    
+    .mouth {
+        width: 100vw;
+        height: 100vw;
+    }
+    
+    .arrow {
+        width: 100vw;
+        height: 100vw;
+    }
+  }
